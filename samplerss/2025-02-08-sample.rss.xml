@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/">
+  <channel rdf:about="http://pinboard.in">
+    <title>Pinboard (kungfoofool)</title>
+    <link>https://pinboard.in/u:kungfoofool/</link>
+    <description>recent bookmarks from kungfoofool</description>
+    <items>
+      <rdf:Seq>	<rdf:li rdf:resource="https://davidcummings.org/2025/01/25/45-pre-interview-questions-from-brad-jacobs/"/>
+	<rdf:li rdf:resource="https://www.oreilly.com/radar/beyond-prompt-and-pray/"/>
+	<rdf:li rdf:resource="https://seldo.com/posts/what-ive-learned-about-writing-ai-apps-so-far"/>
+	<rdf:li rdf:resource="https://github.com/explorerhq/django-sql-explorer"/>
+	<rdf:li rdf:resource="https://github.com/nadrad/h-m-m"/>
+	<rdf:li rdf:resource="https://biriukov.dev/docs/fd-pipe-session-terminal/0-sre-should-know-about-gnu-linux-shell-related-internals-file-descriptors-pipes-terminals-user-sessions-process-groups-and-daemons/"/>
+	<rdf:li rdf:resource="https://www.thecodedmessage.com/posts/qbasic-nostalgia/"/>
+	<rdf:li rdf:resource="https://bitfieldconsulting.com/golang/career"/>
+	<rdf:li rdf:resource="http://www.popehat.com/2013/10/09/history-must-be-curved/"/>
+      </rdf:Seq>
+    </items>
+  </channel><item rdf:about="https://davidcummings.org/2025/01/25/45-pre-interview-questions-from-brad-jacobs/">
+    <title>45 Pre-Interview Questions from Brad Jacobs</title>
+    <dc:date>2025-01-26T03:04:38+00:00</dc:date>
+    <link>https://davidcummings.org/2025/01/25/45-pre-interview-questions-from-brad-jacobs/</link>
+    <dc:creator>kungfoofool</dc:creator><dc:subject>interviews leadership interesting</dc:subject>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:4e514fa08c53/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interviews"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:leadership"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.oreilly.com/radar/beyond-prompt-and-pray/">
+    <title>Beyond Prompt-and-Pray</title>
+    <dc:date>2025-01-23T06:01:09+00:00</dc:date>
+    <link>https://www.oreilly.com/radar/beyond-prompt-and-pray/</link>
+    <dc:creator>kungfoofool</dc:creator><description><![CDATA[Building Reliable LLM-Powered Software in an Agentic World]]></description>
+<dc:subject>llm ai interesting</dc:subject>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:7e394258f2c6/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:llm"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:ai"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://seldo.com/posts/what-ive-learned-about-writing-ai-apps-so-far">
+    <title>What I've learned about writing AI apps so far | Seldo.com</title>
+    <dc:date>2025-01-21T14:03:18+00:00</dc:date>
+    <link>https://seldo.com/posts/what-ive-learned-about-writing-ai-apps-so-far</link>
+    <dc:creator>kungfoofool</dc:creator><description><![CDATA[One of the more practical takes I’ve seen, via Simon Willison.]]></description>
+<dc:subject>ai llm interesting</dc:subject>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:378cd5182656/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:ai"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:llm"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://github.com/explorerhq/django-sql-explorer">
+    <title>explorerhq/django-sql-explorer: Easily share data across your company via SQL queries.</title>
+    <dc:date>2024-07-05T12:55:04+00:00</dc:date>
+    <link>https://github.com/explorerhq/django-sql-explorer</link>
+    <dc:creator>kungfoofool</dc:creator><dc:subject>database django interesting python data ui</dc:subject>
+<dc:source>https://pinboard.in/</dc:source>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:736fa6625e3d/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:database"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:django"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:python"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:data"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:ui"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://github.com/nadrad/h-m-m">
+    <title>nadrad/h-m-m: Hackers Mind Map</title>
+    <dc:date>2023-03-02T14:54:32+00:00</dc:date>
+    <link>https://github.com/nadrad/h-m-m</link>
+    <dc:creator>kungfoofool</dc:creator><dc:subject>cli interesting tool mindmap</dc:subject>
+<dc:source>https://pinboard.in/</dc:source>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:3ccbc21e5cc0/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:cli"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:tool"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:mindmap"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://biriukov.dev/docs/fd-pipe-session-terminal/0-sre-should-know-about-gnu-linux-shell-related-internals-file-descriptors-pipes-terminals-user-sessions-process-groups-and-daemons/">
+    <title>GNU/Linux shell related internals | Viacheslav Biriukov</title>
+    <dc:date>2022-12-19T16:01:22+00:00</dc:date>
+    <link>https://biriukov.dev/docs/fd-pipe-session-terminal/0-sre-should-know-about-gnu-linux-shell-related-internals-file-descriptors-pipes-terminals-user-sessions-process-groups-and-daemons/</link>
+    <dc:creator>kungfoofool</dc:creator><dc:subject>devops interesting linux productivity</dc:subject>
+<dc:source>https://pinboard.in/</dc:source>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:d05a867359cf/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:devops"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:linux"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:productivity"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://www.thecodedmessage.com/posts/qbasic-nostalgia/">
+    <title>The Good Ol' Days of QBasic Nibbles :: The Coded Message</title>
+    <dc:date>2022-07-08T06:18:33+00:00</dc:date>
+    <link>https://www.thecodedmessage.com/posts/qbasic-nostalgia/</link>
+    <dc:creator>kungfoofool</dc:creator><dc:subject>arcade basic fun games interesting retro</dc:subject>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:e92dd69a2e55/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:arcade"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:basic"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:fun"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:games"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:retro"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="https://bitfieldconsulting.com/golang/career">
+    <title>A career ending mistake — Bitfield Consulting</title>
+    <dc:date>2022-02-22T17:52:55+00:00</dc:date>
+    <link>https://bitfieldconsulting.com/golang/career</link>
+    <dc:creator>kungfoofool</dc:creator><dc:subject>career interesting</dc:subject>
+<dc:source>https://pinboard.in/</dc:source>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:87c144837cfa/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:career"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+</rdf:Bag></taxo:topics>
+</item>
+<item rdf:about="http://www.popehat.com/2013/10/09/history-must-be-curved/">
+    <title>History Must Be Curved | Popehat</title>
+    <dc:date>2013-10-10T16:02:21+00:00</dc:date>
+    <link>http://www.popehat.com/2013/10/09/history-must-be-curved/</link>
+    <dc:creator>kungfoofool</dc:creator><dc:subject>reading history interesting</dc:subject>
+<dc:source>https://pinboard.in/</dc:source>
+<dc:identifier>https://pinboard.in/u:kungfoofool/b:534f802dae41/</dc:identifier>
+<taxo:topics><rdf:Bag>	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:reading"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:history"/>
+	<rdf:li rdf:resource="https://pinboard.in/u:kungfoofool/t:interesting"/>
+</rdf:Bag></taxo:topics>
+</item>
+</rdf:RDF>
