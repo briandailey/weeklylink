@@ -16,30 +16,33 @@ logger = structlog.get_logger(__name__)
 
 
 class PostBuilder(object):
-    def __init__(self):
-        self.load_environment_variables()
+    def __init__(
+        self,
+        rss_url: Optional[str] = None,
+        rss_path: Optional[str] = None,
+        max_links: Optional[int] = None,
+        timespan: str = "7",
+        blog_repo: str = None,
+        blog_repo_branch: str = "main",
+        path_to_post: str = "content/post",
+    ):
+        if rss_url is None and rss_path is None:
+            raise ValueError(
+                "Either rss URL or a local path to an RSS file must be provided"
+            )
+
+        self.rss_url = rss_url
+        self.rss_path = rss_path
+        self.max_links = max_links
+        self.timespan = timespan
+        self.blog_repo = blog_repo
+        self.blog_repo_branch = blog_repo_branch
+        self.path_to_post = path_to_post
+
         self.jinja_env = Environment(
             loader=PackageLoader("main"),
             autoescape=select_autoescape(),
         )
-
-    def load_environment_variables(self):
-        self.rss_url = os.getenv("RSS_URL")
-        self.max_links = os.getenv("MAX_LINKS")
-        # By default, we look at the past 7 days.
-        self.timespan = os.getenv("TIMESPAN", "7")
-        # This must be http with a github token.
-        # For example https://x-access-token:$GITHUB_TOKEN@github.com/briandailey/repo.git
-        self.blog_repo = os.getenv("BLOG_REPO")
-        self.blog_repo_branch = os.getenv("BLOG_REPO_BRANCH", "main")
-        # Path to which we are saving the file.
-        self.path_to_post = os.getenv("PATH_TO_POST", "content/post")
-
-        if self.rss_url is None:
-            self.rss_path = os.getenv("RSS_PATH")
-
-        if self.rss_url is None and self.rss_path is None:
-            raise ValueError("RSS_URL or RSS_PATH must be set")
 
     def fetch_rss(self) -> Optional[str]:
         """Fetch RSS content from the provided URL."""
@@ -134,13 +137,71 @@ class PostBuilder(object):
         os.system(f"git -C {tmp_dir} push")
 
 
+@click.command()
+@click.option("--rss-url", help="URL of the RSS feed")
+@click.option("--rss-path", help="Path to local RSS file")
+@click.option("--max-links", type=int, help="Maximum number of links to include")
+@click.option("--timespan", default="7", help="Timespan in days for filtering posts")
+@click.option(
+    "--blog-repo", required=True, help="Git repository URL (with token if needed)"
+)
+@click.option("--blog-repo-branch", default="main", help="Git repository branch")
+@click.option(
+    "--path-to-post", default="content/post", help="Path where posts should be saved"
+)
+@click.option("--no-interactive", is_flag=True, help="Skip confirmation before posting")
+def main(
+    rss_url,
+    rss_path,
+    max_links,
+    timespan,
+    blog_repo,
+    blog_repo_branch,
+    path_to_post,
+    no_interactive,
+):
+    """Generate and publish blog posts from RSS feeds."""
+    try:
+        builder = PostBuilder(
+            rss_url=rss_url,
+            rss_path=rss_path,
+            max_links=max_links,
+            timespan=timespan,
+            blog_repo=blog_repo,
+            blog_repo_branch=blog_repo_branch,
+            path_to_post=path_to_post,
+        )
+
+        rss = builder.fetch_rss()
+        if not rss:
+            logger.error("Failed to fetch RSS content")
+            return
+
+        items = builder.parse_rss(rss)
+        items = builder.filter_items(items)
+
+        if len(items) == 0:
+            logger.info("Nothing to post.")
+            return
+
+        post = builder.assemble_post(items)
+
+        if not no_interactive:
+            click.echo("\nGenerated post content:")
+            click.echo("-" * 40)
+            click.echo(post)
+            click.echo("-" * 40)
+            if not click.confirm("\nDo you want to publish this post?"):
+                click.echo("Aborted.")
+                return
+
+        builder.push_post_to_blog_repo(post)
+        logger.info("Successfully published new post")
+
+    except Exception as e:
+        logger.error("Error occurred", error=str(e))
+        raise click.ClickException(str(e))
+
+
 if __name__ == "__main__":
-    builder = PostBuilder()
-    rss = builder.fetch_rss()
-    items = builder.parse_rss(rss)
-    items = builder.filter_items(items)
-    if len(items) == 0:
-        logger.info("Nothing to post.")
-        exit(0)
-    post = builder.assemble_post(items)
-    builder.push_post_to_blog_repo(post)
+    main()
